@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Request from '../Request/Request';
 import { useState, useEffect } from 'react';
-import { PlayArrow } from '@material-ui/icons';
 
 const Banner = () => {
 	const [movie, setMovie] = useState([]);
@@ -33,7 +32,7 @@ const Banner = () => {
 					className="w-full"
 				/>
 			</div>
-			<h1 className="text-2xl md:text-4xl lg:text-7xl">
+			<h1 className="text-2xl md:text-4xl lg:text-7xl ">
 				{movie?.title || movie?.name || movie?.original_name}
 			</h1>
 			<p className="max-w-xs text-xs md:max-w-lg md:text-2xl lg:max-w-2xl drop-shadow-2xl">
@@ -43,7 +42,7 @@ const Banner = () => {
 			<div className="flex gap-4">
 				<button className="flex bg-white text-black items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl">
 					{' '}
-					<PlayArrow /> Play
+					Play
 				</button>
 				<button className=" bg-black/10 text-white flex items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl">
 					{' '}

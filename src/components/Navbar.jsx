@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 
@@ -63,14 +64,16 @@ const Navbar = () => {
 				gap-7 items-center justify-between
 				"
 				>
-					<img
-						src="https://www.edigitalagency.com.au/wp-content/uploads/netflix-logo-png-large.png"
-						alt=""
-						width={100}
-						height={100}
-						className="cursor-pointer object-contain"
-					/>
-					<ul className="flex text-base font-light cursor-pointer text-[#e5e5e5] gap-6  ">
+					<Link to="/">
+						<img
+							src="https://www.edigitalagency.com.au/wp-content/uploads/netflix-logo-png-large.png"
+							alt=""
+							width={100}
+							height={100}
+							className="cursor-pointer object-contain"
+						/>
+					</Link>
+					<ul className="flex hidden text-base font-light cursor-pointer text-[#e5e5e5] gap-6 md:flex ">
 						<li className="hover:text-red transition-all ease-in 3ms">Home</li>
 						<li className="hover:text-red transition-all ease-in 3ms">
 							Movies
