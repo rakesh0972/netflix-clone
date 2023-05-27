@@ -21,7 +21,6 @@ const Banner = () => {
 		};
 		fetchData();
 	}, []);
-	commit;
 	return (
 		<div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12 text-white/90">
 			<div className="absolute top-0 left-0 h-[95vh] w-full bg-cover -z-10 ">
