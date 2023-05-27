@@ -9,11 +9,12 @@ const Home = () => {
 			<main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16 overflow-x-hidden bg-gradient-to-b from-black/10 via-black to-black">
 				<Banner />
 
-				<Row title="Netflix originals" fetch={Request.fetchTrending} />
+				<Row title="Trending" fetch={Request.fetchTrending} />
 				<Row title="Romance" fetch={Request.fetchRomanceMovies} />
 				<Row title="Horror" fetch={Request.fetchHorrorMovies} />
 				<Row title="Comedy" fetch={Request.fetchComedyMovies} />
 				<Row title="Action" fetch={Request.fetchActionMovies} />
+				<Row title="Documentaries" fetch={Request.fetchDocumentaries} />
 			</main>
 		</div>
 	);
