@@ -25,15 +25,15 @@ const Detail = () => {
 
 	return (
 		<div>
-			<div className="relative text-white/80 bg-black h-full pt-20 px-12 overflow-x-hidden md:flex">
+			<div className="relative text-white/80 bg-black px-10 h-full pt-20 overflow-x-hidden md:flex">
 				<img
 					src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-					className=" h-1/2  object-cover md:w-1/2 "
+					className=" h-1/2  object-cover md:w-1/2"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 opacity-50"></div>
 
 				<div className="detail md:w-1/2">
-					<div className="detail-title px-9 ">
+					<div className="detail-title ">
 						<h1 className="text-4xl font-semibold font-main py-4 text-white md:text-6xl">
 							{movie?.title || movie?.name || movie?.original_name}
 							<br />
