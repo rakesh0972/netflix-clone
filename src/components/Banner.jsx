@@ -2,6 +2,8 @@
 import Request from '../Request/Request';
 import { useState, useEffect } from 'react';
 import axios from '../Services/instance';
+import { Link } from 'react-router-dom';
+import { IconPlayerPlayFilled, IconInfoSmall } from '@tabler/icons-react';
 
 const Banner = () => {
 	const [movie, setMovie] = useState([]);
@@ -36,14 +38,18 @@ const Banner = () => {
 			</p>
 
 			<div className="flex gap-4">
-				<button className="flex bg-white text-black items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl">
+				<button className="flex bg-white/90 text-black items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl">
 					{' '}
+					<IconPlayerPlayFilled />
 					Play
 				</button>
-				<button className=" bg-black/10 text-white flex items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl">
-					{' '}
-					More Info
-				</button>
+				<Link to={`movie/${movie?.id}`}>
+					<button className=" bg-black/80 text-white flex items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl">
+						{' '}
+						<IconInfoSmall />
+						More Info
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

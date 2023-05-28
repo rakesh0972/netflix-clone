@@ -25,38 +25,46 @@ const Detail = () => {
 
 	return (
 		<div>
-			<div className=" text-white/80 bg-gradient-to-b from-white/10  via-black/60 to-black h-[180vh]  ">
+			<div className="relative text-white/80 bg-black h-full pt-20 px-12 overflow-x-hidden md:flex">
 				<img
 					src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-					className="h-full w-screen bg-auto relative -z-10 object-cover"
+					className=" h-1/2  object-cover md:w-1/2 "
 				/>
-				<div className="detail absolute bottom-2">
-					<div className="detail-title px-20 md:px-36">
-						<h1 className="text-8xl font-medium font-main py-4 text-white">
+				<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 opacity-50"></div>
+
+				<div className="detail md:w-1/2">
+					<div className="detail-title px-9 ">
+						<h1 className="text-4xl font-semibold font-main py-4 text-white md:text-6xl">
 							{movie?.title || movie?.name || movie?.original_name}
 							<br />
-							<p className="text-4xl font-medium font-main py-4 text-white/80">
+							<p className="text-xl font-medium font-main pt-1 text-white/80 md:text-2xl">
 								{movie?.tagline}
 							</p>
 						</h1>
 
-						<p className="text-2xl font-medium py-4">{movie.overview}</p>
-						<p className="text-xl font-medium py-1">
+						<p className="text-lg font-medium pb-4 md:text-xl">
+							{movie.overview}
+						</p>
+						<p className="text-md font-medium py-1 md:text-lg">
 							{' '}
 							Release Date : {movie?.release_date}
 						</p>
 
-						<div className="genres flex gap-6 py-1">
-							<h1 className="text-xl font-medium">Genres</h1>
+						<div className="genres flex flex-wrap gap-6 py-1">
+							<h1 className="text-md  md:text-lg font-medium">Genres :</h1>
 							{movie.genres?.map((g) => {
-								return <p className="text-xl font-medium">{g.name}</p>;
+								return (
+									<p className="text-md  md:text-lg font-medium  flex flex-wrap">
+										{g.name}
+									</p>
+								);
 							})}
 						</div>
-						<p className="text-xl font-medium py-1">
+						<p className="text-md font-medium py-1">
 							{' '}
-							Vote Average : {movie?.vote_average}/10
+							Vote Average : {Math.floor(movie?.vote_average)}/10
 						</p>
-						<p className="text-xl font-medium py-1">
+						<p className="text-md font-medium py-1">
 							{' '}
 							Vote Count : {movie?.vote_count}
 						</p>
