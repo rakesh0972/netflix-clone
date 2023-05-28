@@ -9,6 +9,8 @@ const Home = () => {
 			<main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16 overflow-x-hidden bg-gradient-to-b from-black/70 via-black to-black">
 				<Banner />
 
+				<Row title="Netflix originals" fetch={Request.fetchNetflixOriginals} />
+				<Row title="Top Rated" fetch={Request.fetchTopRated} />
 				<Row title="Trending" fetch={Request.fetchTrending} />
 				<Row title="Romance" fetch={Request.fetchRomanceMovies} />
 				<Row title="Horror" fetch={Request.fetchHorrorMovies} />

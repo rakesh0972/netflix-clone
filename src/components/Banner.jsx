@@ -1,17 +1,14 @@
-import axios from 'axios';
+// import axios from 'axios';
 import Request from '../Request/Request';
 import { useState, useEffect } from 'react';
+import axios from '../Services/instance';
 
 const Banner = () => {
 	const [movie, setMovie] = useState([]);
 
-	const baseURL = 'https://api.themoviedb.org/3';
-
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await axios.get(
-				`${baseURL}/${Request.fetchHorrorMovies}`
-			);
+			const response = await axios.get(`${Request.fetchHorrorMovies}`);
 
 			setMovie(
 				response.data.results[

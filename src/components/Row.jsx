@@ -14,11 +14,11 @@ import { Link } from 'react-router-dom';
 const Row = ({ title, fetch }) => {
 	const [movie, setMovie] = useState([]);
 
-	const baseURL = 'https://api.themoviedb.org/3';
+	// const baseURL = 'https://api.themoviedb.org/3';
 	useEffect(() => {
 		const fetchData = async () => {
 			// eslint-disable-next-line react/prop-types
-			const response = await axios.get(`${baseURL}/${fetch}`);
+			const response = await axios.get(`${fetch}`);
 			setMovie(response.data.results);
 		};
 		fetchData();

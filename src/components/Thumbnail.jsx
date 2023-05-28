@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Thumbnail = ({ movie }) => {
 	const [opened, { open, close }] = useDisclosure(false);
-	console.log(movie);
 
 	return (
 		<>
