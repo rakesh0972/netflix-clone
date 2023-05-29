@@ -43,10 +43,10 @@ const Thumbnail = ({ movie }) => {
 
 				<div className="flex gap-6 py-3">
 					<p className="font-semibold text-lg text-black/70">
-						Release Date{movie?.release_date}
+						Release Date: {movie?.release_date}
 					</p>
 					<p className="font-semibold text-lg text-black/70">
-						Votes : {movie.vote_average}/10
+						Votes: {movie.vote_average}/10
 					</p>
 				</div>
 

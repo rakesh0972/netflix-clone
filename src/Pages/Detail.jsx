@@ -32,7 +32,7 @@ const Detail = () => {
 				/>
 				<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/10 opacity-50"></div>
 
-				<div className="detail md:w-1/2">
+				<div className="detail md:w-1/2 md:px-9">
 					<div className="detail-title ">
 						<h1 className="text-4xl font-semibold font-main py-4 text-white md:text-6xl">
 							{movie?.title || movie?.name || movie?.original_name}
